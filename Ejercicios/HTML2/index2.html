@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+    <link rel="stylesheet" href="./Main2.css">
+</head>
+<body>
+    <h1>Repasos Interactivos</h1>
+    <input type="number" id="factorialInput" placeholder="Factorial">
+    <input type="text" id="numeroMayorInput" placeholder="separados por comas para Mayor">
+    <input type="text" id="ordenarArrayInput" placeholder="Números separados por comas para Ordenar">
+    <input type="number" id="filtrarNumerosValor" placeholder="Valor para Filtrar">
+    <input type="text" id="filtrarNumerosArreglo" placeholder="Números separados por comas para Filtrar">
+    <input type="text" id="sumarNumerosInput" placeholder="Números separados por comas para Sumar">
+    <div id="repasoContainer">
+        <button onclick="calcularFactorial()">Factorial</button>
+        <button onclick="encontrarMayor()">Número Mayor</button>
+        <button onclick="ordenarArray()">Ordenar Array</button>
+        <button onclick="filtrarNumeros()">Filtrar</button>
+        <button onclick="sumarTodosLosNumeros()">Sumar Todos Los Numeros</button>
+    </div>
+    <div id="resultadoContainer"></div>
+    <script src="./Ej2.js"></script>
+</body>
+</html>

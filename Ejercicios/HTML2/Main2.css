@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#repasoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+input[type="number"], input[type="text"] {
+    width: 250px; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 2px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    outline: none; 
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    animation: pulse 1s infinite;
+}
+
+button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.8); 
+}
+
+.resultado {
+    margin-top: 20px;
+    text-align: right;
+    color: blue;
+}
+
+audio[role="alert"] {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+button:active ~ audio[role="alert"] {
+    position: static;
+}
+
+#resultadoContainer {
+    animation: fadeIn 1s forwards;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+
+    #repasoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #inputContainer,
+    #resultadoContainer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #repasoContainer {
+        flex-wrap: nowrap;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
